@@ -15,7 +15,10 @@ interface Game {
   returned: boolean;
   attendee_id: string;
   attendee: Attendee;
-  checked_out: boolean;
+  checked_out: {
+    when: string; // Date
+    attendee: Attendee;
+  }
 }
 
 type Attendees = Array<Attendee>;
